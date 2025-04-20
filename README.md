@@ -1,58 +1,75 @@
 # Healthcare Revenue Cycle Optimisation
 A real-world project focused on Healthcare Revenue Cycle Management (RCM), leveraging Azure Data Factory, Databricks, and Medallion architecture to build scalable, KPI-driven data pipelines for financial insights and timely collections.
-
-This repository contains an end-to-end data engineering project focused on **Healthcare Revenue Cycle Management (RCM)** using **Azure** cloud technologies. The project is designed to simulate real-world data engineering scenarios in the healthcare sector and equip participants with hands-on experience in building data pipelines, managing healthcare datasets, and generating insights using modern data platforms.
+---
 
 ## 🚀 Project Overview
 
-The main objective of this project is to provide a complete walkthrough of how to build, manage, and scale data engineering solutions in a healthcare setting. Participants will work with datasets including **Electronic Medical Records (EMR)** and **insurance claims**, utilizing APIs, flat files, and Azure SQL databases.
-
-The project covers:
-- Healthcare Revenue Cycle Management (RCM)
-- Accounts Receivable vs Accounts Payable
-- KPI tracking and visualization
-- Real-time and batch data processing pipelines
-- Audit and monitoring mechanisms
-
-##  Architecture
-
-This project follows the **Medallion Architecture**:
-- **Bronze Layer**: Raw data ingestion from APIs, flat files, and SQL sources.
-- **Silver Layer**: Cleaned, structured data using a common data model (with Slowly Changing Dimensions).
-- **Gold Layer**: Aggregated and enriched data used for analytics and reporting.
-
-## 🛠️ Tech Stack
-
-- **Azure Data Factory** – Data ingestion
-- **Azure Databricks** – Data processing
-- **Azure SQL Database** – Structured data storage
-- **Azure Data Lake Storage** – Data lake
-- **Power BI** (optional) – Dashboarding and KPI visualization
-
-## 📊 Key Concepts Covered
-
-- Healthcare Revenue Cycle Management
-- Importance of Accounts Receivable KPIs
-- Payment timelines and financial risk mitigation
-- Audit trail implementation
-- Scalable pipeline design for dynamic data loads
-- Common data models and slowly changing dimensions
-- User-centric architecture (Engineers, Analysts, Scientists)
-
-## 👨‍💻 User Personas
-
-- **Data Engineers**: Build and maintain pipelines
-- **Data Scientists**: Access clean and structured datasets for modeling
-- **Business Analysts**: Visualize key metrics and drive strategic decisions
-
-## 📈 Learning Outcomes
-
-- Gain practical experience in cloud data engineering
-- Understand real-world healthcare data challenges
-- Master Azure-based tools for ingestion, transformation, and storage
-- Build scalable, production-grade data pipelines
+The project focuses on **Healthcare Revenue Cycle Management (RCM)**, a critical component in hospital financial operations that includes patient appointments, insurance claims, treatments, billing, and payments. It addresses both **Accounts Receivable (AR)** and **Accounts Payable (AP)** to maintain a financial balance and ensure optimized collections.
 
 ---
 
+## 🏗️ Architecture Overview
 
+- **Medallion Architecture**:
+  - **Bronze Layer**: Raw data ingestion from EMR systems, insurance APIs, and flat files.
+  - **Silver Layer**: Cleaned and enriched data with Slowly Changing Dimensions (SCDs).
+  - **Gold Layer**: Finalized, business-ready KPIs and reports.
+
+- **Cloud Platforms**:
+  - **Azure**:
+    - Azure Data Factory (ADF) – for orchestrating ingestion.
+    - Azure Databricks – for processing and transformations.
+    - Azure Data Lake Storage – for raw/curated data storage.
+    - Azure SQL Database – for structured reporting.
+  - **GCP**:
+    - BigQuery – for large-scale analytics and reporting.
+    - Cloud Functions – for triggering alerts/anomaly responses.
+    - Cloud Storage – for flat-file management.
+    - Vertex AI – used optionally for model experimentation.
+
+- **ML Integration**:
+  - **Autoencoder-based Anomaly Detection**:
+    - Detect unusual billing patterns, late payments, or suspicious transactions.
+    - Applied on AR/AP data to identify risks and highlight anomalies for review.
+    - Trained on historical data and deployed in a monitoring pipeline.
+
+---
+
+## 🔑 Key Features
+
+- 📊 **Healthcare RCM Coverage**: End-to-end patient financial flow from registration to reimbursement.
+- 📈 **Anomaly Detection with ML**: Autoencoders to catch billing irregularities and payment delays.
+- 🏥 **Accounts Monitoring**: Real-time insights on AR and AP balances, payment KPIs.
+- 🧠 **Machine Learning Integration**: Seamless embedding of anomaly detection into data pipeline.
+- 🌐 **Multi-Cloud Setup**: Robust hybrid setup using **Azure + GCP** for distributed processing.
+- 🔄 **Dynamic Pipelines**: Scalable, event-based pipelines for healthcare workflows.
+- 🧾 **Audit Trails & Alerts**: Logs, version control, and automated notifications on anomalies.
+
+---
+
+## 🧰 Tools & Tech Stack
+
+| Category         | Tools/Tech                           |
+|------------------|---------------------------------------|
+| Cloud Platforms  | Azure, GCP                            |
+| Data Ingestion   | Azure Data Factory, Cloud Storage     |
+| Data Processing  | Azure Databricks, BigQuery            |
+| Storage          | ADLS Gen2, Cloud Storage              |
+| Database         | Azure SQL, BigQuery                   |
+| ML               | Autoencoder (TensorFlow/Keras/PyTorch)|
+| Orchestration    | ADF, Cloud Functions                  |
+| Reporting        | Power BI, Looker Studio               |
+
+---
+
+## 👩‍💻 User Personas
+
+- **Data Engineers**: Set up pipelines, monitor data flows, ensure data quality.
+- **Data Scientists**: Train and evaluate autoencoder models for anomaly detection.
+- **Business Analysts**: Explore KPIs for AR/AP health and financial stability.
+- **Healthcare Admins**: Use dashboards to ensure timely collections and flag risks.
+
+---
+
+Siddharth Venkatesh,Abinaya Vina,Prajasree,RudhraPriya
 
